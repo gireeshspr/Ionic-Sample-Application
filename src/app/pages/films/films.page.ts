@@ -21,9 +21,9 @@ export class FilmsPage implements OnInit {
     // this.films = this.http.get('https://swapi.dev/api/films');
     this.platform.ready().then(() => {
       this.films = this.api.getFilms();
-      // this.films.subscribe(data => {
-      //   console.log(data);
-      // })
+      this.films.subscribe(data => {
+        console.log(data);
+      })
     });
   };
 
