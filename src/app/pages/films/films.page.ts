@@ -35,10 +35,10 @@ export class FilmsPage implements OnInit {
   };
 
   showPlanets(){
-   this.films = this.http.get('https://swapi.dev/api/films');
-   this.films.subscribe(data => {
-    console.log(data);
-  })
-    // this.navController.navigateRoot('tabs/planets');
+  //  this.films = this.http.get('https://swapi.dev/api/films');
+  //  this.films.subscribe(data => {
+  //   console.log(data);
+  // })
+    this.navController.navigateRoot('tabs/planets');
   }
 }
