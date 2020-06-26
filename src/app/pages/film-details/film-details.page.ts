@@ -45,7 +45,7 @@ export class FilmDetailsPage implements OnInit {
   }
 
   unFavoriteFilm(){
-    this.favService.favoriteFilm(this.filmId).then(() =>{
+    this.favService.unfavoriteFilm(this.filmId).then(() =>{
       this.isFavorite = false;
     });
   }
