@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Palnet Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngIf='planet'>
+  <ion-card-content>
+    Name: {{ planet.name }} <br>
+    Terrain : {{ planet.terrain }}<br>
+    Created: {{ planet.created }} <br>
+    Films: {{ planet.films }} <br>
+    Residents: {{ planet.residents }}
+  </ion-card-content>
+</ion-card>
+</ion-content>

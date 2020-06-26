@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-back-button defaultHref='/tabs/films'></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ film?.title }}</ion-title>
+    <ion-buttons slot='end'>
+      <ion-button (click)='favoriteFilm()' *ngIf='!isFavorite'>
+        <ion-icon name='star-outline' slot='icon-only'></ion-icon>
+      </ion-button>
+      <ion-button (click)='unFavoriteFilm()' *ngIf='isFavorite'>
+        <ion-icon name='star' slot='icon-only'></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf='film'>
+    <ion-label>Film ID - {{ filmId }},  Name - {{ film.title }}</ion-label>
+    <ion-card-content>
+      {{ film.opening_crawl }}
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-label position='floating'>Email: </ion-label>
+    <ion-input placeholder='Enter email to share film details.' autofocus='true' type='text'></ion-input>
+  </ion-item>
+  <ion-button expand='full' (click)='shareFilm()'>Email Film Detail</ion-button>
+</ion-content>

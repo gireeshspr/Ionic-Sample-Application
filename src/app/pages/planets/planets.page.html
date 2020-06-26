@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Planets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item button detail lines='insert' *ngFor='let planet of (planets | async)?.results' (click)='showPlanetDetail(planet)'>
+    {{planet.name}}
+  </ion-item>
+</ion-content>

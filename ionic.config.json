@@ -1,0 +1,7 @@
+{
+  "name": "gvfirstapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
