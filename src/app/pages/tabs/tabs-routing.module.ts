@@ -40,6 +40,19 @@ const routes: Routes = [
           },
         ]
       },
+      {
+        path:'',
+        children:[
+          {
+            path: 'developers',
+            loadChildren: () => import('../developers/developers.module').then( m => m.DevelopersPageModule)
+          },
+          {
+            path: ':id',
+            loadChildren: () => import('../developer/developer.module').then( m => m.DeveloperPageModule)
+          }
+        ]
+      }
     ]
   },
   {
